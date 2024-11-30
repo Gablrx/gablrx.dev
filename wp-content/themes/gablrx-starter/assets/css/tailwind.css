@@ -1,0 +1,8 @@
+/* gablrx-starter\assets\css\tailwind.css */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style contact modale */
+@import "contact-modal.css";

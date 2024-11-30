@@ -1,0 +1,44 @@
+/* animations.css */
+
+/* Conteneur de la barre */
+.loading-bar {
+  width: 150px; /* Largeur finale de la barre */
+  height: 22px;
+  border-radius: 1px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform: scaleX(
+    0
+  ); /* Départ de l'animation avec une échelle horizontale de 0 */
+  transform-origin: left; /* Point d'origine de l'animation à gauche */
+  animation: expandScale 1.8s ease-out 1.5s forwards; /* Animation d'expansion avec un délai */
+}
+
+/* Texte dans la barre */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out 3.5s forwards; /* Apparition du texte après l'expansion de la barre */
+}
+
+/* Animation d'agrandissement de la barre avec scaleX */
+@keyframes expandScale {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1); /* Fin de l'animation avec une échelle de 1 (100%) */
+  }
+}
+
+/* Animation de fondu pour le texte */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,90 @@
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: url("../img/close-white.png"), auto;
+}
+
+.contact-modal .modal-content {
+  background-color: #fefefef7;
+  margin: 5% auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  max-width: 400px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: default;
+}
+
+/* Responsive: mobile */
+@media (max-width: 768px) {
+  .contact-modal .modal-content {
+    max-width: 350px;
+    margin: 15% auto;
+  }
+}
+
+.contact-modal .modal-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-modal .modal-content label,
+.contact-modal .modal-content input[type="submit"] {
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.contact-modal .modal-content .contactFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-modal .modal-content .contactFormContainer input,
+.contact-modal .modal-content .contactFormContainer textarea,
+.contact-modal .modal-content .contactFormContainer input[type="submit"] {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+}
+
+.contact-modal .modal-content .contactFormContainer input,
+.contact-modal .modal-content .contactFormContainer input[type="submit"] {
+  height: 40px;
+}
+
+.contact-modal .modal-content .contactFormContainer textarea {
+  height: 100px;
+}
+
+.contact-modal .modal-content .contactFormContainer input[type="submit"] {
+  margin: auto;
+  border-radius: 2px;
+  background-color: #b91c1c;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-modal .modal-content .contactFormContainer input[type="submit"]:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact-modal .modal-content .contactFormContainer #wpcf7-f36-o1 > form {
+  max-width: 300px;
+}
