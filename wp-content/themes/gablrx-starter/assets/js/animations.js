@@ -43,7 +43,10 @@ if (typingText) { // Vérifie si l'élément existe
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        // Animation d'écriture
-        type();
+        // Ajouter un délai avant de démarrer l'animation
+        setTimeout(() => {
+            type();
+
+        }, 250); // Délai de 1 seconde (1000 ms)
     });
 }

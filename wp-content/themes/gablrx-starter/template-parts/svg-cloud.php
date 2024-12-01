@@ -6,68 +6,74 @@
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/sass-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'Sass'
+                tooltip: '#Sass'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/figma-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'Figma'
+                tooltip: '#Figma'
+            },
+            {
+                image: "<?php echo get_template_directory_uri(); ?>/assets/icons/plain/Elementor.svg",
+                width: '65',
+                height: '65',
+                tooltip: '#Elementor'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/npm-original-wordmark.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'npm'
+                tooltip: '#npm'
             },
 
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/html5-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'HTML5'
+                tooltip: '#HTML5'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/css3-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'CSS3'
+                tooltip: '#CSS3'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/tailwindcss-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'Tailwind CSS'
+                tooltip: '#Tailwind CSS'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/bootstrap-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'Bootstrap'
+                tooltip: '#Bootstrap'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/php-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'php'
+                tooltip: '#Php'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/jquery-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'jQuery'
+                tooltip: '#jQuery'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/javascript-original.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'JavaScript'
+                tooltip: '#JavaScript'
             },
             {
                 image: "<?php echo get_template_directory_uri(); ?>/assets/icons/colored/wordpress-plain.svg",
                 width: '65',
                 height: '65',
-                tooltip: 'WordPress'
+                tooltip: '#WordPress'
             },
         ];
 
@@ -83,8 +89,8 @@
             opacitySpeed: 6,
             fov: 1000,
             speed: 0.10,
-            tooltipFontFamily: 'Arial, sans-serif',
-            tooltipFontSize: '15',
+            tooltipFontFamily: 'Courier New',
+            tooltipFontSize: '16',
             tooltipFontColor: '#111',
             tooltipFontWeight: 'normal',
             tooltipFontStyle: 'normal',

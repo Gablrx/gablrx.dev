@@ -29,7 +29,7 @@ document.addEventListener('click', function (event) {
 
 
 // Charger Particles.js
-particlesJS.load('particles-js', '/gablrx.dev/wp-content/themes/gablrx-starter/assets/js/particles.json', function () {
+particlesJS.load('particles-js', '/wp-content/themes/gablrx-starter/assets/js/particles.json', function () {
 
 });
 

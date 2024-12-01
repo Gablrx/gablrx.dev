@@ -6,6 +6,17 @@ function gablrx_enqueue_assets()
     // wp_enqueue_style('gablrx-style', get_template_directory_uri() . '/assets/css/style.css', [], '1.0');
     wp_enqueue_style('gablrx-style', get_template_directory_uri() . '/assets/css/style.css', [], filemtime(get_template_directory() . '/assets/css/style.css'));
     wp_enqueue_style('gablrx-animation-css', get_template_directory_uri() . '/assets/css/animations.css', [], filemtime(get_template_directory() . '/assets/css/animations.css'));
+
+    // FONT
+    wp_enqueue_style(
+        'gablrx-fonts',
+        get_template_directory_uri() . '/assets/css/fonts.css',
+        [],
+        filemtime(get_template_directory() . '/assets/css/fonts.css')
+    );
+
+
+
     wp_enqueue_style('contact-modal-style', get_template_directory_uri() . '/assets/css/contact-modal.css', [], filemtime(get_template_directory() . '/assets/css/contact-modal.css'));
 
 

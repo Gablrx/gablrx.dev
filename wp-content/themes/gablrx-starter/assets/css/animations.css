@@ -10,30 +10,27 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transform: scaleX(
-    0
-  ); /* Départ de l'animation avec une échelle horizontale de 0 */
-  transform-origin: left; /* Point d'origine de l'animation à gauche */
-  animation: expandScale 1.8s ease-out 1.5s forwards; /* Animation d'expansion avec un délai */
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: expandScale 1.8s ease-out 1.5s forwards;
 }
 
-/* Texte dans la barre */
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 0.4s ease-out 3.5s forwards; /* Apparition du texte après l'expansion de la barre */
+  animation: fadeIn 0.4s ease-out 3.5s forwards; /* Apparition du texte après chargementde la barre */
 }
 
-/* Animation d'agrandissement de la barre avec scaleX */
+/* Chargement de la barre  */
 @keyframes expandScale {
   from {
     transform: scaleX(0);
   }
   to {
-    transform: scaleX(1); /* Fin de l'animation avec une échelle de 1 (100%) */
+    transform: scaleX(1);
   }
 }
 
-/* Animation de fondu pour le texte */
+/* FADE IN*/
 @keyframes fadeIn {
   from {
     opacity: 0;

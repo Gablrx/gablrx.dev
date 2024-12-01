@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Source Code Pro', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        /* heading: ['Arial', 'ui-sans-serif', 'system-ui', 'sans-serif'], */
+        sans: ['Source Code Pro', 'sans-serif', 'Courier New', 'monospace'],
       },
       mixBlendMode: {
         difference: 'difference',

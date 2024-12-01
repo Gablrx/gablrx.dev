@@ -11,7 +11,7 @@ get_header();
             <?php get_template_part('template-parts/svg-cloud'); ?>
         </div>
 
-        <!-- Présentation -->
+        <!-- PRESENTATION -->
         <div class="w-full md:w-1/2 max-w-lg">
             <div class=" font-bold mb-4">
                 <span id="typing-text" class="text-xl uppercase px-1" data-text="<?php bloginfo('name'); ?>"></span>
@@ -21,13 +21,30 @@ get_header();
                 </div>
 
             </div>
-            <div class="mb-6 fadeIn">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+            <div class="presentation mb-6 fadeIn">
+                <?php
+                // Récupère la présentation
+                $wysiwyg_presentation = get_field('presentation');
+                if ($wysiwyg_presentation) :
+                    echo '<div class="wysiwyg-content">';
+                    echo $wysiwyg_presentation;
+                    echo '</div>';
+                endif;
+                ?>
             </div>
 
             <!-- Social links -->
-            <div class="flex justify-end space-x-4 fadeIn">
+            <div class="flex justify-center space-x-4 fadeIn">
+
+                <!-- Mailto: -->
+                <a href="mailto:lrx.gab@gmail.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <?php echo file_get_contents(get_template_directory() . '/assets/icons/plain/email-icon.svg'); ?>
+                    </div>
+                </a>
+
+                <!-- github -->
                 <?php if (get_theme_mod('gablrx_github_link')) : ?>
                     <a href="<?php echo esc_url(get_theme_mod('gablrx_github_link')); ?>" target="_blank" rel="noopener noreferrer" class="w-8 h-8">
                         <div class="w-full h-full">
@@ -36,6 +53,7 @@ get_header();
                     </a>
                 <?php endif; ?>
 
+                <!-- linkedin -->
                 <?php if (get_theme_mod('gablrx_linkedin_link')) : ?>
                     <a href="<?php echo esc_url(get_theme_mod('gablrx_linkedin_link')); ?>" target="_blank" rel="noopener noreferrer" class="w-8 h-8">
                         <div class="w-full h-full">
@@ -43,6 +61,9 @@ get_header();
                         </div>
                     </a>
                 <?php endif; ?>
+
+
+
             </div>
 
         </div>
@@ -50,8 +71,46 @@ get_header();
 
     </section>
 
-    <!-- PROJETS -->
-    <section id="portfolio" class="portfolio pt-8 md:px-32">
+    <!-- PARCOURS -->
+    <section id="parcours" class="flex flex-col gap-8 items-start mt-8 md:mt-32 md:px-32 bg-white bg-opacity-70  rounded-lg shadow p-6">
+        <!-- Titre -->
+        <div class="text-center w-full ">
+            <h2 class="text-4xl font-bold">Parcours</h2>
+        </div>
+
+        <!-- Contenu Formation et Expérience -->
+        <div class="flex flex-col md:flex-row gap-8 w-full">
+
+            <!-- Formation -->
+            <div class="formation w-full md:w-1/2">
+                <?php
+                // Récupère champs formation
+                $wysiwyg_formation = get_field('formation');
+                if ($wysiwyg_formation) :
+                    echo '<div class="wysiwyg-content">';
+                    echo $wysiwyg_formation;
+                    echo '</div>';
+                endif;
+                ?>
+            </div>
+
+            <!-- Expérience -->
+            <div class="experience w-full md:w-1/2">
+                <?php
+                // Récupère champs experience
+                $wysiwyg_experience = get_field('experience');
+                if ($wysiwyg_experience) :
+                    echo '<div class="wysiwyg-content">';
+                    echo $wysiwyg_experience;
+                    echo '</div>';
+                endif;
+                ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio mt-8 md:mt-32 md:px-32">
         <div class="text-center mb-8">
             <h2 class="text-4xl font-bold ">Portfolio</h2>
         </div>
@@ -147,6 +206,12 @@ get_header();
 
         <?php wp_reset_postdata(); ?>
     </section>
+
+
+
+
+
+
 
 </main>
 
